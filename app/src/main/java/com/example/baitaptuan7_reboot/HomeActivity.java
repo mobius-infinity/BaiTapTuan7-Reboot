@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.baitaptuan7_reboot.databinding.ActivityHomeBinding;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 public class HomeActivity extends AppCompatActivity {
     public ObservableField<String> title = new ObservableField<>();
     private ListUserAdapter listUserAdapter;
