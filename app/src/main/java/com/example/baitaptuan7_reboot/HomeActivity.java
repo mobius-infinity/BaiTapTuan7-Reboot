@@ -3,13 +3,10 @@ package com.example.baitaptuan7_reboot;
 import android.os.Bundle;
 
 import android.widget.Toast;
-import androidx.databinding.BaseObservable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableField;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.baitaptuan7_reboot.databinding.ActivityHomeBinding;
 import java.util.ArrayList;
@@ -19,7 +16,6 @@ public class HomeActivity extends AppCompatActivity {
     public ObservableField<String> title = new ObservableField<>();
     private ListUserAdapter listUserAdapter;
     public ActivityHomeBinding binding;
-    public String string ="ví dụ về Databinding cho RecycleView";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -31,12 +27,7 @@ public class HomeActivity extends AppCompatActivity {
         setData();
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(listUserAdapter);
-        listUserAdapter.setOnItemClickListener(new ListUserAdapter.OnItemClickListener() {
-            @Override
-            public void itemClick(User user) {
-                Toast.makeText(HomeActivity.this, "bạn vừa click", Toast.LENGTH_SHORT).show();
-            }
-        });
+        listUserAdapter.setOnItemClickListener(user -> Toast.makeText(HomeActivity.this, "bạn vừa click", Toast.LENGTH_SHORT).show());
     }
     private void setData()
     {
