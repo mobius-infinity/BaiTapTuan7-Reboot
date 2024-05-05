@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         title.set("ví dụ về Databinding cho RecycleView");
         binding = DataBindingUtil.setContentView(this,R.layout.activity_home);
-        //Toast.makeText(HomeActivity.this,title.toString(),Toast.LENGTH_LONG).show();
+        Toast.makeText(HomeActivity.this,title.toString(),Toast.LENGTH_LONG).show();
         binding.setHome(this);
         setData();
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
